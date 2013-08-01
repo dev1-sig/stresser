@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jannis Hermanns"]
   s.date = %q{2010-11-30}
-  s.description = %q{Wrapper around httperf for stresstesting your app. Runs httperf multiple times with different concurrency levels and generates an executive summary™ in .csv"}
+  s.description = %q{Wrapper around httperf for stresstesting your app. Runs httperf multiple times with different concurrency levels and generates an executive summary in .csv"}
   s.email = %q{jannis@moviepilot.com}
   s.executables = ["stresser", "stresser-grapher", "stresser-loggen"]
   s.extra_rdoc_files = [
