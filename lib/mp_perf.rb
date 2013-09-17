@@ -72,6 +72,10 @@ class MPPerf
   def single_benchmark(conf)
     cloned_conf = conf.clone
 
+    if conf['httperf_wsesslog'] && conf['wsesslog_per_rate'] == 'true'
+      cloned_conf['httperf_wsesslog'] = conf['httperf_wsesslog'] + ".#{conf['httperf_rate']}"
+    end
+
     # Shuffle the logfile around?
     if conf['httperf_wlog'] and conf['shuffle']=='true'
       file = conf['httperf_wlog'].split(',').last
